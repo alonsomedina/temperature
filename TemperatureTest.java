@@ -83,24 +83,56 @@ public class TemperatureTest {
   @Test
   //Test cases for changeUnits()
   //check if we need to test getValue as well as getUnit() (should be automatic)
+  //maybe change lines to check for both constructors
   public void testChangeUnits() {
     
     //test for changing between Celcius and Kelvin
     System.out.println("Testing if changeUnits() changes correctly between Celcius and Kelvin... ");
     Temperature cToKTestCase = new Temperature(15, Temperature.CELCIUS);
     cToKTestCase.changeUnits(Temperature.KELVIN);
-    assertTrue(cToKTestCase.getUnits() == Temperature.KELVIN && /*cToKTestCase.getValue() == */);
+    assertTrue(cToKTestCase.getUnits() == Temperature.KELVIN /*&& cToKTestCase.getValue() == */);
     Temperature cToKTestCase2 = new Temperature(cToKTestValue);
-    assertTrue(cToKTestCase2.getUnits() == Temperature.KELVIN && /*cToKTestCase.getValue() == */);
+    assertTrue(cToKTestCase2.getUnits() == Temperature.KELVIN /*&& cToKTestCase.getValue() == */);''
     
     //test for changing between Celcius and Fahrenheit
+    System.out.println("Testing if changeUnits() changes correctly between Celcius and Fahrenheit... ");
+    Temperature cToFTestCase = new Temperature(15, Temperature.CELCIUS);
+    cToFTestCase.changeUnits(Temperature.FAHRENHEIT);
+    assertTrue(cToFTestCase.getUnits() == Temperature.FAHRENHEIT /*&& cToFTestCase.getValue() == */);
+    Temperature cToFTestCase2 = new Temperature(cToFTestValue);
+    assertTrue(cToFTestCase2.getUnits() == Temperature.FAHRENHEIT /*&& cToFTestCase.getValue() == */);
     
     //test for changing between Kelvin and Fahrenheit
+    System.out.println("Testing if changeUnits() changes correctly between Kelvin and Fahrenheit... ");
+    Temperature kToFTestCase = new Temperature(15, Temperature.KELVIN);
+    kToFTestCase.changeUnits(Temperature.FAHRENHEIT);
+    assertTrue(kToFTestCase.getUnits() == Temperature.FAHRENHEIT /*&& kToFTestCase.getValue() == */);
+    Temperature kToFTestCase2 = new Temperature(kToFTestValue);
+    assertTrue(kToFTestCase2.getUnits() == Temperature.FAHRENHEIT /*&& kToFTestCase.getValue() == */);
     
     //test for changing between Kelvin and Celcius
+    System.out.println("Testing if changeUnits() changes correctly between Kelvin and Celsius... ");
+    Temperature kToCTestCase = new Temperature(15, Temperature.KELVIN);
+    kToCTestCase.changeUnits(Temperature.CELCIUS);
+    assertTrue(kToCTestCase.getUnits() == Temperature.CELCIUS /*&& kToCTestCase.getValue() == */);
+    Temperature kToCTestCase2 = new Temperature(kToCTestValue);
+    assertTrue(kToCTestCase2.getUnits() == Temperature.CELCIUS /*&& kToCTestCase.getValue() == */);
     
     //test for changing between Fahrenheit and Kelvin
+    System.out.println("Testing if changeUnits() changes correctly between Fahrenheit and Kelvin... ");
+    Temperature fToKTestCase = new Temperature(15, Temperature.FAHRENHEIT);
+    fToKTestCase.changeUnits(Temperature.KELVIN);
+    assertTrue(fToKTestCase.getUnits() == Temperature.KELVIN /*&& fToKTestCase.getValue() == */);
+    Temperature fToKTestCase2 = new Temperature(fToKTestValue);
+    assertTrue(fToKTestCase2.getUnits() == Temperature.KELVIN /*&& fToKTestCase.getValue() == */);
     
     //test for changing between Fahrenheit and Celcius
+    System.out.println("Testing if changeUnits() changes correctly between Fahrenheit and Celsius... ");
+    Temperature fToCTestCase = new Temperature(15, Temperature.FAHRENHEIT);
+    fToCTestCase.changeUnits(Temperature.CELSIUS);
+    assertTrue(fToCTestCase.getUnits() == Temperature.CELCIUS /*&& fToCTestCase.getValue() == */);
+    Temperature fToCTestCase2 = new Temperature(fToCTestValue);
+    assertTrue(fToCTestCase2.getUnits() == Temperature.CELCIUS /*&& fToCTestCase.getValue() == */);
+    
   }
 }
