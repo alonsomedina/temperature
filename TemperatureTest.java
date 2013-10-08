@@ -13,13 +13,26 @@ public class TemperatureTest {
   // {@Code Temperature} class.
 
   @Test
-  public void testGetValue(){
-    //nominal test case
-     System.out.println("Testing if getValue gets the correct value... ");
-     Temperature nominalTestCase = new Temperature (15, Temperature.CELSIUS);
-     assertTrue(nominalTestCase.getValue() == 15);
-     Temperature nominalTestCaseConverted = new Temperature(nominalTestCase);
-     assertTrue(nominalTestCaseConverted.getValue() == 15);
+  //Test cases for getValue() in Celcius
+  public void testGetValueCelcius(){
+    //nominal test case in Celcius
+    System.out.println("Testing if getValue gets the correct value for a nominal case using Celcius... ");
+    Temperature nominalTestCase = new Temperature (15, Temperature.CELSIUS);
+    assertTrue(nominalTestCase.getValue() == 15);
+    Temperature nominalTestCase2 = new Temperature(nominalTestCase);
+    assertTrue(nominalTestCase2.getValue() == 15);
+    //negative test case in Celcius
+    System.out.println("Testing if getValue gets the correct value for a negative case using Celcius... ");
+    Temperature negativeTestCase = new Temperature (-15, Temperature.CELSIUS);
+    assertTrue(negativeTestCase.getValue() == -15);
+    Temperature negativeTestCase2 = new Temperature(negativeTestCase);
+    assertTrue(negativeTestCase2.getValue() == -15);
+    //zero value test case in Celcius
+    System.out.println("Testing if getValue gets the correct value for a zero value case using Celcius... ");
+    Temperature zeroTestCase = new Temperature (0, Temperature.CELSIUS);
+    assertTrue(zeroTestCase.getValue() == 0);
+    Temperature zeroTestCase2 = new Temperature(zeroTestCase);
+    assertTrue(zeroTestCase2.getValue() == 0);
   }
 
   //@Test
