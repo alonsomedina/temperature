@@ -16,15 +16,27 @@ public class TemperatureTest {
   //Test cases for getUnits()
   public void testGetUnits() {
     
-    //test case Celcius
-    /**
-     * add a units comparison helper method to Temperature.java
-     */
+    //test case for Celcius
     System.out.println("Testing if getUnits() gets the correct value for Celcius... ");
     Temperature celciusTestCase = new Temperature(15, Temperature.CELCIUS);
     assertTrue(celciusTestCase.getUnits() == Temperature.CELCIUS);
     Temperature celciusTestCase2 = new Temperature(celciusTestCase);
-    assertTrue(celciusTestCase2.getUnits() == Temperature.CELCIUS)
+    assertTrue(celciusTestCase2.getUnits() == Temperature.CELCIUS);
+    
+    //test case for Fahrenheit
+    System.out.println("Testing if getUnits() gets the correct value for Fahrenheit... ");
+    Temperature fahrenheitTestCase = new Temperature(15, Temperature.FAHRENHEIT);
+    assertTrue(fahrenheitTestCase.getUnits() == Temperature.FAHRENHEIT);
+    Temperature fahrenheitTestCase2 = new Temperature(fahrenheitTestCase);
+    assertTrue(fahrenheitTestCase2.getUnits() == Temperature.FAHRENHEIT);
+    
+    //test case for Kelvin
+    System.out.println("Testing if getUnits() gets the correct value for Kelvin... ");
+    Temperature kelvinTestCase = new Temperature(15, Temperature.KELVIN);
+    assertTrue(kelvinTestCase.getUnits() == Temperature.KELVIN);
+    Temperature kelvinTestCase2 = new Temperature(kelvinTestCase);
+    assertTrue(kelvinTestCase2.getUnits() == Temperature.KELVIN);
+    
   }
 
   @Test
