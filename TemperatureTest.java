@@ -80,8 +80,27 @@ public class TemperatureTest {
     
   }
 
-  //@Test
-  //public void .... (){
+  @Test
+  //Test cases for changeUnits()
+  //check if we need to test getValue as well as getUnit() (should be automatic)
+  public void testChangeUnits() {
     
-  //}
+    //test for changing between Celcius and Kelvin
+    System.out.println("Testing if changeUnits() changes correctly between Celcius and Kelvin... ");
+    Temperature cToKTestCase = new Temperature(15, Temperature.CELCIUS);
+    cToKTestCase.changeUnits(Temperature.KELVIN);
+    assertTrue(cToKTestCase.getUnits() == Temperature.KELVIN && /*cToKTestCase.getValue() == */);
+    Temperature cToKTestCase2 = new Temperature(cToKTestValue);
+    assertTrue(cToKTestCase2.getUnits() == Temperature.KELVIN && /*cToKTestCase.getValue() == */);
+    
+    //test for changing between Celcius and Fahrenheit
+    
+    //test for changing between Kelvin and Fahrenheit
+    
+    //test for changing between Kelvin and Celcius
+    
+    //test for changing between Fahrenheit and Kelvin
+    
+    //test for changing between Fahrenheit and Celcius
+  }
 }
